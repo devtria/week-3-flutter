@@ -5,31 +5,52 @@ void main() {
     const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text(
-            'Hello World!',
-            //style: TextStyle(fontSize: 50),
-          ),
+          child: BasicTextWidget(text: 'Satria Nurulloh'),
         ),
       ),
     ),
   );
+
 }
 
-class MyWidget extends StatelessWidget {
-  Widget build(BuildContext context) {
-    return const Text('Ruby Aspirant',
-      style: TextStyle(
-        fontSize: 34,
-        color: Colors.blue,
-      ),
-    );
-  }
+class BasicTextWidget extends StatelessWidget {
+  final String text;
 
-  const new({super.key});
-  static const name = "Satria Nurulloh";
+  const BasicTextWidget({
+    super.key,
+    required this.text,
+  });
+
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+        Text(
+          'Normal',
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
+
+        Text(
+          'Normal',
+            style: TextStyle(
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+
+        Text(
+          'Normal',
+            style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+    ],
+  );
+
   }
 }
