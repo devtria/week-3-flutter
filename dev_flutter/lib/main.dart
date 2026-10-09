@@ -13,6 +13,7 @@ void main() {
 
 }
 
+// belajar membuat widget text sederhana
 class BasicTextWidget extends StatelessWidget {
   final String text;
 
@@ -52,5 +53,26 @@ class BasicTextWidget extends StatelessWidget {
     ],
   );
 
+  }
+}
+
+// Belajar class untuk membuat perkenalan diri
+class NamaSaya extends StatelessWidget {
+  const NamaSaya({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('Woy kenalin, gw Satria'),
+            Text('Gw seorang AI Engineer'),
+            Text('Gw mahasiswa IT'),
+          ],
+        ),
+      ),
+    );
   }
 }
