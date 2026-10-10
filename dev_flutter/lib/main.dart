@@ -76,3 +76,46 @@ class NamaSaya extends StatelessWidget {
     );
   }
 }
+
+// Widget sederhana untuk perkenalan denagn style yang lebih moderna
+class PerkenalanWidget extends StatelessWidget {
+  const PerkenalanWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min, // Agar posisinya tepat di tengah layar
+      crossAxisAlignment: CrossAxisAlignment.start, // Mengatur agar semua teks rata kiri
+      children: const [
+        Text(
+          'Halo, Nama Saya Satria',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue,
+          ),
+        ),
+
+        SizedBox(height: 10),
+
+        Text(
+          'Pekerjaan: AI Engineer',
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+gi
+        SizedBox(height: 5),
+
+        Text(
+          'Status: Mahasiswa IT',
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.grey,
+          ),
+        ),
+      ],
+    );
+  }
+}
