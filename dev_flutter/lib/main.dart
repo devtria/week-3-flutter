@@ -76,3 +76,25 @@ class NamaSaya extends StatelessWidget {
     );
   }
 }
+
+
+// Belajar class untuk membuat perkenalan diri dengan parameter
+class GameFav extends StatelessWidget {
+  const GameFav({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Flex(direction: Axis.horizontal)(
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('Woy kenalin, gw Satria'),
+            Text('Gw sedang belajar Flutter'),
+            Text('Gw mahasiswa IT'),
+          ],
+        ),
+      ),
+    );
+  }
+}
