@@ -15,9 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Belajar Dart',
       home: HomePage(),
       theme:ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 255, 255),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 143, 96, 96),
         brightness: Brightness.dark,
-          
       ),
       useMaterial3: true,
     ),
@@ -32,7 +31,20 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Belajar Dart'),
+        leading: Icon(Icons.abc, color: const Color.fromARGB(255, 251, 113, 237),),
+        title: Center(child: Text('Belajar Dart')),
+        backgroundColor: Color.fromARGB(255, 25, 140, 255),
+        actions: [
+          IconButton(onPressed: () {
+            print('Icon Ditekan');
+          }, icon: Icon(Icons.accessibility_new),),
+          IconButton(onPressed: () {
+            print('Icon Ditekan 2');
+          }, icon: Icon(Icons.account_balance),),
+          IconButton(onPressed: () {
+            print('Icon Ditekan 3');
+          }, icon: Icon(Icons.account_box),),
+        ],
       ),
       body: const Center(
         child: Text('Hello Mahasiswa Global Institute'),
